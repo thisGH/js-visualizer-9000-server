@@ -27,6 +27,7 @@ wss.on('connection', (ws) => {
 
           if (evt.type === 'Done') {
             const reducedEvents = reduceEvents(events);
+            console.log('------')
             console.log(reducedEvents.map(JSON.stringify))
             ws.send(JSON.stringify(reducedEvents));
           }
